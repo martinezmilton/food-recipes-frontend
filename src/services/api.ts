@@ -12,4 +12,9 @@ export const fetchMealsByCategory = (category: string) => {
     return fetchData(url);
 };
 
+export const fetchMealsByName = (name: string) => {
+    const url = `${BASE_URL}/search.php?s=${name}`;
+    return fetchData(url);
+}
+
 //UTILIAZR URL BASE.

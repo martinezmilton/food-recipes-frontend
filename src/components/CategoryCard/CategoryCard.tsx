@@ -3,10 +3,10 @@ import './CategoryCard.css'
 type Props = {
     name: string;
     image: string;
-    onclick?: ()=> void; 
+    onclick?: () => void;
 }
 
-const CategoryCard = ({name, image, onclick} : Props) => {
+const CategoryCard = ({ name, image, onclick }: Props) => {
     return (
         <div className="category-card sombra" onClick={onclick}>
             <img src={image} alt={name} />
@@ -16,3 +16,4 @@ const CategoryCard = ({name, image, onclick} : Props) => {
 }
 
 export default CategoryCard;
+
