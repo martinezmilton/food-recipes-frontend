@@ -1,13 +1,14 @@
 import './CategoryCard.css'
 
-type CategoryCardPages = {
+type Props = {
     name: string;
     image: string;
+    onclick?: ()=> void; 
 }
 
-const CategoryCard: React.FC<CategoryCardPages> = ({name, image}) => {
+const CategoryCard = ({name, image, onclick} : Props) => {
     return (
-        <div className="category-card">
+        <div className="category-card" onClick={onclick}>
             <img src={image} alt={name} />
             <h2>{name}</h2>
         </div>
