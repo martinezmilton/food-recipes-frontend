@@ -1,18 +1,10 @@
-:root {
+/* :root {
   --blanco: #fff;
   --negro: #000;
 }
 
-
-
 body {
   background-color: var(--blanco);
-}
-
-h1 {
-  text-align: center;
-  margin-top: 20px;
-  color: var(--negro);
 }
 
 .categories-container {
@@ -20,4 +12,4 @@ h1 {
   flex-wrap: wrap;
   justify-content: center;
   padding: 20px;
-}
+} */
