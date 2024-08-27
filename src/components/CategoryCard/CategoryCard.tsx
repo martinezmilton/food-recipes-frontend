@@ -8,7 +8,7 @@ type Props = {
 
 const CategoryCard = ({name, image, onclick} : Props) => {
     return (
-        <div className="category-card" onClick={onclick}>
+        <div className="category-card sombra" onClick={onclick}>
             <img src={image} alt={name} />
             <h2>{name}</h2>
         </div>

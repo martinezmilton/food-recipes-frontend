@@ -1,4 +1,5 @@
 import CategoryCard from '../CategoryCard/CategoryCard';
+import './CategoryList.css';
 
 type Props = {
     categories: { strCategory: string }[];
@@ -8,8 +9,8 @@ type Props = {
 
 const CategoryList = ({ categories, error, onCategoryClick }: Props) => {
     return (
-        <div className="categories-container">
-            <div className="categories">
+        <div className="contenedor">
+            <div className="grid">
                 {error && <p>{error}</p>}
                 {categories.length > 0 ? (
                     categories.map((category) => (

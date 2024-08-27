@@ -16,7 +16,7 @@ const HeroSection = () => {
                     </div>
                 </div>
                 <div className='header-text'>
-                    <h2>Explore by category</h2>
+                    <h2 className='text'>Explore by category</h2>
                     <div className="header-search">
                         <input className='search-content' type="text" placeholder="Find recipes..." />
                         <button className='search-buttom' >Search</button>
