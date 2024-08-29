@@ -7,13 +7,9 @@ type Props = {
 
 const MealCard = ({ name, image }: Props) => {
     return (
-        <div className="meal-card">
-            <div>
+        <div className="meal-card sombra">
                 <img src={image} alt={name} />
-            </div>
-            <div>
                 <p>{name}</p>
-            </div>
         </div>
     )
 }

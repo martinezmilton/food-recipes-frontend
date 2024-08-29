@@ -1,6 +1,19 @@
 
 /*Meal List - cards*/
 .contenido-principal{
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.meal-grid{
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+@media (min-width: 768px) {
+    .meal-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
 }

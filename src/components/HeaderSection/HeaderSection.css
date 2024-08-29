@@ -79,13 +79,17 @@
 
 .text{
     margin-bottom: 10px;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 600;
 }
 
 @media (min-width: 768px) {
     .header-text{
-        margin-top: 200px;
+        margin-top: 160px;
+    }
+
+    .text{
+        font-size: 35px;
     }
 }
 

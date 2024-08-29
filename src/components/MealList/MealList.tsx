@@ -8,21 +8,21 @@ type Props = {
 
 const MealList = ({ meals, error }: Props) => {
     return (
-        <div>
-            <div className='contenido-principal'>
-                {error && <p>{error}</p>}
-                {meals.length > 0 ? (
-                    meals.map((meal) => (
+        <div className='contenido-principal'>
+            {error && <p>{error}</p>}
+            {meals.length > 0 ? (
+                <div className='meal-grid'>
+                    {meals.map((meal) => (
                         <MealCard
                             key={meal.strMeal}
                             name={meal.strMeal}
                             image={meal.strMealThumb}
                         />
-                    ))
-                ) : (
-                    <p>No hay comidas en esta categoría</p>
-                )}
-            </div>
+                    ))}
+                </div>
+            ) : (
+                <p>No hay comidas en esta categoría</p>
+            )}
         </div>
     );
 };
