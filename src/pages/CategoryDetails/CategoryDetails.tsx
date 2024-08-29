@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useMealsByCategory } from "../../hooks/useMealsByCategory";
 import MealList from "../../components/MealList/MealList";
+import HeroSection from "../../components/HeaderSection/HeaderSection";
 
 function CategoryDetails() {
     const { category } = useParams();
@@ -8,7 +9,6 @@ function CategoryDetails() {
 
     return (
         <>
-            <h1>Meals in {category}</h1>
             <MealList
                 meals={meals}
                 error={error}

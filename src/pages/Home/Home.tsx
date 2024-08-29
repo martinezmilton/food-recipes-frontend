@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import HeroSection from "../../components/HeroSection/HeroSection";
-import './Home.css';
+import HeroSection from "../../components/HeaderSection/HeaderSection";
 import { useCategories } from "../../hooks/useCategory";
 import CategoryList from "../../components/CategoryList/CategoryList";
 
@@ -14,7 +13,6 @@ function Home() {
 
     return (
         <div>
-            <HeroSection />
             <CategoryList
                 categories={categories}
                 error={error}

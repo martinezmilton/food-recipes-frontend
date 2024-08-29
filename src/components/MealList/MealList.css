@@ -1,0 +1,6 @@
+
+/*Meal List - cards*/
+.contenido-principal{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}

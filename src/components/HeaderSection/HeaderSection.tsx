@@ -1,4 +1,4 @@
-import './HeroSection.css'
+import './HeaderSection.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
@@ -7,9 +7,9 @@ import MealCard from '../MealCard/MealCard';
 import chef from '../../assets/chef.png';
 
 
-const HeroSection = () => {
+const HeaderSection = () => {
     const [query, setQuery] = useState('');
-    // const { meals, error } = useSearchMeals(query);
+    const { meals, error } = useSearchMeals(query);
 
     const handleSearch = () => {
         setQuery(query);
@@ -45,7 +45,7 @@ const HeroSection = () => {
                     </div>
                 </div>
 
-                {/* <div className="search-results">
+                <div className="search-results">
                     {error && <p>{error}</p>}
                     {meals.length > 0 ? (
                         meals.map((meal) => (
@@ -58,10 +58,10 @@ const HeroSection = () => {
                     ) : (
                         query && <p>No se encontraron recetas para "{query}".</p>
                     )}
-                </div> */}
+                </div>
             </div>
         </header>
     )
 }
 
-export default HeroSection;
+export default HeaderSection;

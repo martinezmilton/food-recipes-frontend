@@ -1,15 +1,19 @@
-
+import './MealCard.css';
 
 type Props = {
     name: string;
     image: string;
 }
 
-const MealCard = ({name, image}: Props) => {
+const MealCard = ({ name, image }: Props) => {
     return (
-        <div>
-            <img src={image} alt={name} />
-            <h2>{name}</h2>
+        <div className="meal-card">
+            <div>
+                <img src={image} alt={name} />
+            </div>
+            <div>
+                <p>{name}</p>
+            </div>
         </div>
     )
 }
