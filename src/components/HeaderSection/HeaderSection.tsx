@@ -2,17 +2,19 @@ import './HeaderSection.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
-import { useSearchMeals } from '../../hooks/useSearchMeals';
-import MealCard from '../MealCard/MealCard';
 import chef from '../../assets/chef.png';
 
+type Props = {
+    onSearch: (query: string) => void;
+    placeholder: string;
+}
 
-const HeaderSection = () => {
+const HeaderSection = ({ onSearch, placeholder }: Props) => {
     const [query, setQuery] = useState('');
-    const { meals, error } = useSearchMeals(query);
 
     const handleSearch = () => {
-        setQuery(query);
+        onSearch(query);
+        setQuery('');
     }
 
     return (
@@ -31,33 +33,18 @@ const HeaderSection = () => {
                     </div>
                 </div>
                 <div className='header-text'>
-                    <h2 className='text'>What's Cooking Today?</h2>
+                    <h2 className='text'>What are you cooking today?</h2>
                     <div className="header-search">
                         <FontAwesomeIcon icon={faSearch} className="search-icon" />
-                        <input 
-                        className='search-content' 
-                        type="text" 
-                        placeholder="Find recipes..."
-                        value={query}
-                        onChange={(e) => setQuery(e.target.value)}
+                        <input
+                            className='search-content'
+                            type="text"
+                            placeholder={placeholder}
+                            value={query}
+                            onChange={(e) => setQuery(e.target.value)}
                         />
-                        <button className='button' onClick={handleSearch} >Search</button>
+                        <button className='button' onClick={handleSearch}>Search</button>
                     </div>
-                </div>
-
-                <div className="search-results">
-                    {error && <p>{error}</p>}
-                    {meals.length > 0 ? (
-                        meals.map((meal) => (
-                            <MealCard
-                                key={meal.idMeal}
-                                name={meal.strMeal}
-                                image={meal.strMealThumb}
-                            />
-                        ))
-                    ) : (
-                        query && <p>No se encontraron recetas para "{query}".</p>
-                    )}
                 </div>
             </div>
         </header>

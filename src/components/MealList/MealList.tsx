@@ -9,14 +9,6 @@ type Props = {
 const MealList = ({ meals, error }: Props) => {
     return (
         <div>
-            <div>
-                <input type="text" placeholder='Search for a recipe' />
-            </div>
-            <div>
-                <h3>Popular Searches</h3>
-
-            </div>
-            <h2>Trending Recipes</h2>
             <div className='contenido-principal'>
                 {error && <p>{error}</p>}
                 {meals.length > 0 ? (
