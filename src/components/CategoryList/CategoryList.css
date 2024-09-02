@@ -7,14 +7,37 @@
     }
 }
 
-.grid {
+.grid-category {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin: 20px 0;
+    margin: 10px 0;
 }
 
 @media (min-width: 768px) {
-    .grid {
+    .grid-category {
         grid-template-columns: repeat(3, 1fr);
     }
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.pagination button {
+    background-color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 15px;
+    margin: 0 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.pagination button.active {
+    background-color: orangered;
+    color: white;
 }

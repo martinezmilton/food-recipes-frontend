@@ -17,4 +17,9 @@ export const fetchMealsByName = (name: string) => {
     return fetchData(url);
 }
 
+export const fetchMealDetails = (id: string) => {
+    const url = `${BASE_URL}/lookup.php?i=${id}`;
+    return fetchData(url);
+}
+
 //UTILIAZR URL BASE.

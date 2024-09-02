@@ -4,6 +4,7 @@ import { fetchMealsByCategory } from "../services/api";
 type Meal = {
     strMeal: string;
     strMealThumb: string;
+    idMeal: string;
 };
 
 export const useMealsByCategory = (category: string | undefined) => {

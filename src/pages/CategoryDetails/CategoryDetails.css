@@ -1,0 +1,33 @@
+/*Conten*/
+
+.conten {
+    display: flex;
+    justify-content:start;
+    margin-left: 20px;
+    margin-top: 10px;
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .conten {
+        margin-left: 205px;
+    }
+    
+}
+
+.conten-titulo {
+    font-size: 25px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.conten-button {
+    background-color: orangered;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+}

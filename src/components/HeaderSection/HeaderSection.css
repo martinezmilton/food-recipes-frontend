@@ -134,9 +134,9 @@
 
 .button {
     border-radius: 20px;
-    padding: 0.6em 1.2em;
-    font-size: 1em;
-    font-weight: 600;
+    padding: 10px 19px;
+    font-size: 16px;
+    font-weight: 500;
     background-color: orangered;
     cursor: pointer;
     border: none;

@@ -7,7 +7,7 @@
 
  .category-card {
    border-radius: 10px;
-   margin: 10px 5px 0 5px;
+   margin: 10px 5px 0 0px;
    padding: 5px;
    width: 165px;
    text-align: center;
@@ -29,7 +29,7 @@
  .category-card img {
    max-width: 100%;
    height: auto;
-   border-radius: 100%;
+   border-radius: 8px;
  }
 
  @media (min-width: 768px) {
